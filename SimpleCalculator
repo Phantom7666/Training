@@ -18,7 +18,7 @@ int main(){
     cout << "Masukkan pilihan : "; cin >> pilih;
     if(pilih == 5){
     cout << "Terima Kasih telah memakai program saya" << endl;
-    cout << "             " << "By : AchsanFT59" << endl;
+    cout << "             " << "By : PhantomFT59" << endl;
     cout << "                " << "^_^" << endl;
     break;
     }
