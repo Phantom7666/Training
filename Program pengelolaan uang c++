@@ -1,0 +1,94 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double JumlahUang;
+void UbahNilai(){
+    double NilaiBaru;
+    cout << "Nilai sebelum diubah : Rp." << JumlahUang << endl;
+    cout << "Masukkan jumlah uang yang baru : Rp."; cin >> NilaiBaru;
+    JumlahUang = NilaiBaru;
+}
+void TotalUang(){
+    double totalUang;
+        if(JumlahUang < 0){
+        cout << "Nilai Tidak valid!!!" << endl;
+        return;
+    }
+    totalUang = JumlahUang;
+    cout << "Total uangmu saat ini : Rp." << setprecision(10) << totalUang <<endl;
+}
+void Tabungan(){
+    double tabungan;
+        if(JumlahUang < 0){
+        cout << "Nilai Tidak valid!!!" << endl;
+        return;
+    }
+    tabungan = 0.5*JumlahUang;
+    cout << "Uang yang harus kamu tabung : Rp." <<setprecision(10) << tabungan << endl;
+}
+void KebutuhanUtama(){
+    double kebutuhanUtama;
+        if(JumlahUang < 0){
+        cout << "Nilai Tidak valid!!!" << endl;
+        return;
+    }
+    kebutuhanUtama = 0.3*JumlahUang;
+    cout << "Uang untuk kebutuhan utama : Rp." << setprecision(10) << kebutuhanUtama << endl;
+}
+void Keinginan(){
+    double keinginan;
+        if(JumlahUang < 0){
+        cout << "Nilai Tidak valid!!!" << endl;
+        return;
+    }
+    keinginan = 0.2*JumlahUang;
+    cout << "Uang yang boleh kamu keluarkan untuk keinginan : Rp." << setprecision(10) << keinginan << endl;
+}
+
+int main(){
+    JumlahUang = 0;
+    int pilih;
+    cout << "Masukkan uangmu saat ini : Rp."; cin >> JumlahUang;
+    do{
+    cout << "Pilih hitungan\n";
+    cout << "1. Total uang\n";
+    cout << "2. Tabungan\n";
+    cout << "3. Kebutuhan utama\n";
+    cout << "4. Keinginan\n";
+    cout << "5. Ubah nilai uang\n";
+    cout << "6. Keluar\n";
+    cout << "Silahkan pilih : "; cin >> pilih;
+    switch(pilih){
+        case 1:
+        TotalUang();
+        cout << endl;
+        break;
+        case 2:
+        Tabungan();
+        cout << endl;
+        break;
+        case 3:
+        KebutuhanUtama();
+        cout << endl;
+        break;
+        case 4:
+        Keinginan();
+        cout << endl;
+        break;
+        case 5:
+        UbahNilai();
+        cout << endl;
+        break;
+        case 6:
+        cout << "Keluar!!" << endl;
+        break;
+        default :
+        cout << "Pilihan tidak valid!!!\n";
+        cout << endl;
+        break;
+    }
+}while(pilih!=6);
+    cout << "Terimakasih ^-^" << endl;
+    return 0;
+}
