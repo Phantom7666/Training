@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    double BeratBadan, TinggiBadan, BMI;
+    cout << "Kalkulator BMI" << endl;
+    cout << "Masukkan Berat Badanmu (kg): "; cin >> BeratBadan;
+    cout << "Masukkan Tinggi Badanmu (m): "; cin >> TinggiBadan;
+    BMI = BeratBadan/(TinggiBadan*TinggiBadan);
+    if(BMI<=18.5){
+        cout << "BMI = " << BMI <<endl;
+        cout << "Berat badan anda kurang!!!";
+    }else if(BMI>=22.5){
+        cout << "BMI = " << BMI <<endl;
+        cout << "Anda kelebihan berat!!!";
+    }else{
+        cout << "BMI = " << BMI <<endl;
+        cout << "Berat badan anda mormal";
+    }
+    return 0;
+}
