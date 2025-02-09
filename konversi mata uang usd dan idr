@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+void KonversiRPkeUSD(){
+    double IDR, USD;
+    cout << "Masukkan nilai uang = "; cin >> IDR;
+    USD=16000/IDR;
+    cout << IDR << ".Rp = " << USD << "$" <<endl;
+}
+
+void KonversiUSDkeRP(){
+    double IDR, USD;
+    cout << "Masukkan nilai uang = "; cin >> USD;
+    IDR = USD*16000;
+    cout << USD << "$ = " << IDR << ".Rp" <<endl;
+}
+
+int main(){
+    int pilih;
+    cout << "Sistem Konversi" <<endl;
+    cout << "1. IDR ke USD" <<endl;
+    cout << "2. USD ke IDR" <<endl;
+    cout << "Masukkan pilihan : "; cin >> pilih;
+    switch(pilih){
+        case 1:
+        KonversiRPkeUSD();
+        break;
+        case 2:
+        KonversiUSDkeRP();
+        break;
+        default :
+        cout << "Invalid menu!!!" <<endl;
+        break;
+    }
+    return 0;
+}
