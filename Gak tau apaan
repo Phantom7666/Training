@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+double InputGas, InputLux, InputThermo;
+void GasSensor(){
+    cout << "Sensor gas : ";cin>>InputGas;
+}
+
+void LuxSensor(){
+    cout << "Lux : "; cin>> InputLux;
+}
+void ThermoSensor(){
+    cout << "Suhu : ";cin >> InputThermo;
+}
+
+void BacaSensor(){
+    if(InputThermo<=36 && InputLux>=2500 && InputGas <= 75){
+        cout << "Gas normal" <<endl;
+        cout << "Cahaya normal" <<endl;
+        cout << "Suhu normal" <<endl;
+    }
+    if(InputGas>75){
+        cout << "Gas terdeteksi!!!"<<endl;
+        cout << "Buzzer berbunyi!!"<<endl;
+    }if (InputLux<2500){
+        cout << "Ruangan gelap!!!"<<endl;
+    }if (InputThermo>36){
+        cout << "Suhu udara memanas!!!"<<endl;
+        cout << "Buzzer berbunyi!!!"<<endl;
+        
+    }
+}
+int main(){
+    GasSensor();
+    LuxSensor();
+    ThermoSensor();
+    BacaSensor();
+    return 0;
+}
