@@ -1,0 +1,49 @@
+import math
+
+def HITUNGVOLUMEKUBUS(a):
+    return a*a*a
+
+def HITUNGVOLUMEBALOK(a, b, c):
+    return a*b*c
+
+def HITUNGVOLUMESILINDER(r, h):
+    return math.pi*r*r*h
+
+def HITUNGVOLUMEKERUCUT(r, h):
+    return 1/3*math.pi*r*r*h
+
+def HITUNGVOLUMEBOLA(r):
+    return 4/3*math.pi*r*r*r
+    
+while True:
+    print("\nSelamat datang di program penghitung volume bangun ruang")
+    print("1. Volume Kubus")
+    print("2. Volume Balok")
+    print("3. Volume Silinder")
+    print("4. Volume Kerucut")
+    print("5. Volume Bola")
+    print("0. Keluar")
+    pilih = int(input("Masukkan pilihan anda: "))
+    if pilih == 1:
+        a = int(input("Masukkan sisi kubus: "))
+        print("Volume kubus adalah", HITUNGVOLUMEKUBUS(a))
+    elif pilih == 2:
+        a = int(input("Masukkan panjang balok: "))
+        b = int(input("Masukkan lebar balok: "))
+        c = int(input("Masukkan tinggi balok: "))
+        print("Volume balok adalah", HITUNGVOLUMEBALOK(a, b, c))
+    elif pilih == 3:
+        r = int(input("Masukkan jari-jari silinder: "))
+        h = int(input("Masukkan tinggi silinder: "))
+        print("Volume silinder adalah", HITUNGVOLUMESILINDER(r, h))
+    elif pilih == 4:
+        r = int(input("Masukkan jari-jari kerucut: "))
+        h = int(input("Masukkan tinggi kerucut: "))
+        print("Volume kerucut adalah", HITUNGVOLUMEKERUCUT(r, h))
+    elif pilih == 5:
+        r = int(input("Masukkan jari-jari bola: "))
+        print("Volume bola adalah", HITUNGVOLUMEBOLA(r))
+    elif pilih == 0:
+        break
+    else:
+        print("Pilihan tidak valid")
